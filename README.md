@@ -1,0 +1,1 @@
+Starter template for Nuxt v4 projects including Nuxt UI v3 and Nuxt i18n module.

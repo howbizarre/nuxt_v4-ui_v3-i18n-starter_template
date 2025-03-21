@@ -1,0 +1,46 @@
+{
+  "name": "@howbizarre/nuxt_v4-ui_v3-i18n-starter-template",
+  "version": "1.0.1",
+  "description": "This boilerplate is based on Nuxt v4 with Nuxt UI v3 and Nuxt i18n module. Also TypeScript support, Heroicons and Dark theme switch.",
+  "homepage": "https://bizarre.how/nuxt4bp/",
+  "license": "CC-BY-4.0",
+  "repository": "github:@howbizarre/nuxt_v4-ui_v3+i18n-starter_template",
+  "author": "How Bizarre <how.bizarre@gmail.com>",
+  "keywords": [
+    "nuxt",
+    "nuxt4",
+    "vue",
+    "typescript",
+    "boilerplate",
+    "template",
+    "javascript",
+    "vuejs",
+    "node",
+    "component",
+    "starter",
+    "vue3",
+    "theme",
+    "dark",
+    "dark theme",
+    "vue 3",
+    "nuxt 4"
+  ],
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --port 3332",
+    "idx": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@iconify-json/heroicons": "^1.2.2",
+    "@nuxt/ui": "^3.0.0",
+    "@nuxtjs/i18n": "^9.3.2",
+    "nuxt": "^3.16.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  }
+}
