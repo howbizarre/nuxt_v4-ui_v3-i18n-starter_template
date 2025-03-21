@@ -30,7 +30,7 @@ PROJECT ROOT
 |   |       LangSwitcher.vue
 |   |       
 |   +---pages
-|   |       [...slug].vue
+|   |       index.vue
 |   |       
 |   \---public
 |           favicon.ico
