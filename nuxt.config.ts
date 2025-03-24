@@ -25,6 +25,9 @@ export default defineNuxtConfig({
         file: "bg-BG.json",
       },
     ],
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
   },
 
   css: ["~/assets/css/main.css"],
