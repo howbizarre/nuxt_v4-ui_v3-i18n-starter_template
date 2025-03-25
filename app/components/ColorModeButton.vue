@@ -15,7 +15,7 @@ const isDark = computed({
     <UButton :icon="isDark ? 'i-heroicons-sun-20-solid' : 'i-heroicons-moon-20-solid'"
              @click="isDark = !isDark"
              color="neutral"
-             variant="ghost"
+             variant="link"
              aria-label="Color theme switcher"
              class="cursor-pointer" />
 

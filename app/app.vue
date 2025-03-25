@@ -1,8 +1,11 @@
 <template>
   <UApp>
     <NuxtRouteAnnouncer />
-    <ColorModeButton />
-    <LangSwitcher />
-    <NuxtPage />
+
+    <UContainer class="my-3">
+      <NavBar />
+      
+      <NuxtPage />
+    </UContainer>
   </UApp>
 </template>

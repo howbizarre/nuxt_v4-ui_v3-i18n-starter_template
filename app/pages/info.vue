@@ -4,6 +4,6 @@ const { t } = useI18n();
 
 <template>
   <UContainer class="my-3 border-t p-4 border-gray-200 dark:border-gray-800">
-    {{ t('LBL_HELLO') }}
+    {{ t('LBL_INFO') }}
   </UContainer>
 </template>

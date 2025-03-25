@@ -1,3 +1,5 @@
 {
-  "LBL_HELLO": "Hello"
+  "LBL_HELLO": "Hello",
+  "LBL_HOME": "Home",
+  "LBL_INFO": "Info"
 }

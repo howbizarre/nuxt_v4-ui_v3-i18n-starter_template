@@ -6,7 +6,8 @@ watch(locale, () => useHead({ htmlAttrs: { lang: locale.value } }));
 </script>
 
 <template>
-  <SwitchLocalePathLink v-for="locale in availableLocales" :key="locale.code" :locale="locale.code" class="btn btn-default">
-    {{ locale.name }}
+  <SwitchLocalePathLink v-for="locale in availableLocales" :key="locale.code" :locale="locale.code"
+    class="flex items-center gap-2">
+    <UBadge color="neutral" variant="outline">{{locale.name}}</UBadge>
   </SwitchLocalePathLink>
 </template>
