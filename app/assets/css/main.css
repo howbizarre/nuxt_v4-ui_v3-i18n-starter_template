@@ -1,2 +1,6 @@
 @import "tailwindcss" theme(static);
 @import "@nuxt/ui";
+
+.router-link-active.router-link-exact-active {
+  @apply text-black dark:text-white font-bold;
+}
