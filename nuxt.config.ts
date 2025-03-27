@@ -38,12 +38,12 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
 
   app: {
-    baseURL: '/nuxt4bp/', // Ensure this matches the subfolder
+    baseURL: import.meta.dev ? '' : '/nuxt4bp/', // Ensure this matches the subfolder
   },
 
   nitro: {
     output: {
-      publicDir: fileURLToPath(new URL('./public', import.meta.url))
+      publicDir: fileURLToPath(new URL('./nuxt4bp', import.meta.url))
     }
   },
 });
