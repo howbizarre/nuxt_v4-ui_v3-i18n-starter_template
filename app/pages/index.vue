@@ -5,9 +5,12 @@ const thisPath = computed(() => localePath("/"));
 
 const { data: page } = await useAsyncData(() => queryCollection("content").path(thisPath.value).first());
 
+onMounted(async () => {
+  page.value = await queryCollection("content").path(thisPath.value).first();
+});
+
 watch(thisPath, async () => {
   page.value = await queryCollection("content").path(thisPath.value).first();
-  //await nextTick();
 });
 </script>
 
