@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@iconify-json/heroicons": "^1.2.2",
+    "@nuxt/content": "^3.4.0",
     "@nuxt/ui": "^3.0.0",
     "@nuxtjs/i18n": "^9.3.2",
     "nuxt": "^3.16.0",
