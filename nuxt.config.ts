@@ -37,6 +37,10 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   future: { compatibilityVersion: 4 },
 
+  app: {
+    baseURL: '/nuxt4bp/', // Ensure this matches the subfolder
+  },
+
   nitro: {
     output: {
       publicDir: fileURLToPath(new URL('./public', import.meta.url))
