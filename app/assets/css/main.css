@@ -2,5 +2,5 @@
 @import "@nuxt/ui";
 
 .router-link-active.router-link-exact-active {
-  @apply text-black dark:text-white font-bold;
+  @apply text-black dark:text-white font-bold bg-white dark:bg-black sm:bg-white/0 sm:dark:bg-black/0;
 }
