@@ -1,3 +1,5 @@
+import { fileURLToPath } from 'url';
+
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxtjs/i18n"],
 
@@ -34,4 +36,10 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: false },
   future: { compatibilityVersion: 4 },
+
+  nitro: {
+    output: {
+      publicDir: fileURLToPath(new URL('./public', import.meta.url))
+    }
+  },
 });
