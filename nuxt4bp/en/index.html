@@ -1,0 +1,97 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style id="nuxt-ui-colors">@layer base {
+  :root {
+  --ui-color-primary-50: var(--color-green-50, oklch(0.982 0.018 155.826));
+  --ui-color-primary-100: var(--color-green-100, oklch(0.962 0.044 156.743));
+  --ui-color-primary-200: var(--color-green-200, oklch(0.925 0.084 155.995));
+  --ui-color-primary-300: var(--color-green-300, oklch(0.871 0.15 154.449));
+  --ui-color-primary-400: var(--color-green-400, oklch(0.792 0.209 151.711));
+  --ui-color-primary-500: var(--color-green-500, oklch(0.723 0.219 149.579));
+  --ui-color-primary-600: var(--color-green-600, oklch(0.627 0.194 149.214));
+  --ui-color-primary-700: var(--color-green-700, oklch(0.527 0.154 150.069));
+  --ui-color-primary-800: var(--color-green-800, oklch(0.448 0.119 151.328));
+  --ui-color-primary-900: var(--color-green-900, oklch(0.393 0.095 152.535));
+  --ui-color-primary-950: var(--color-green-950, oklch(0.266 0.065 152.934));
+  --ui-color-secondary-50: var(--color-blue-50, oklch(0.97 0.014 254.604));
+  --ui-color-secondary-100: var(--color-blue-100, oklch(0.932 0.032 255.585));
+  --ui-color-secondary-200: var(--color-blue-200, oklch(0.882 0.059 254.128));
+  --ui-color-secondary-300: var(--color-blue-300, oklch(0.809 0.105 251.813));
+  --ui-color-secondary-400: var(--color-blue-400, oklch(0.707 0.165 254.624));
+  --ui-color-secondary-500: var(--color-blue-500, oklch(0.623 0.214 259.815));
+  --ui-color-secondary-600: var(--color-blue-600, oklch(0.546 0.245 262.881));
+  --ui-color-secondary-700: var(--color-blue-700, oklch(0.488 0.243 264.376));
+  --ui-color-secondary-800: var(--color-blue-800, oklch(0.424 0.199 265.638));
+  --ui-color-secondary-900: var(--color-blue-900, oklch(0.379 0.146 265.522));
+  --ui-color-secondary-950: var(--color-blue-950, oklch(0.282 0.091 267.935));
+  --ui-color-success-50: var(--color-green-50, oklch(0.982 0.018 155.826));
+  --ui-color-success-100: var(--color-green-100, oklch(0.962 0.044 156.743));
+  --ui-color-success-200: var(--color-green-200, oklch(0.925 0.084 155.995));
+  --ui-color-success-300: var(--color-green-300, oklch(0.871 0.15 154.449));
+  --ui-color-success-400: var(--color-green-400, oklch(0.792 0.209 151.711));
+  --ui-color-success-500: var(--color-green-500, oklch(0.723 0.219 149.579));
+  --ui-color-success-600: var(--color-green-600, oklch(0.627 0.194 149.214));
+  --ui-color-success-700: var(--color-green-700, oklch(0.527 0.154 150.069));
+  --ui-color-success-800: var(--color-green-800, oklch(0.448 0.119 151.328));
+  --ui-color-success-900: var(--color-green-900, oklch(0.393 0.095 152.535));
+  --ui-color-success-950: var(--color-green-950, oklch(0.266 0.065 152.934));
+  --ui-color-info-50: var(--color-blue-50, oklch(0.97 0.014 254.604));
+  --ui-color-info-100: var(--color-blue-100, oklch(0.932 0.032 255.585));
+  --ui-color-info-200: var(--color-blue-200, oklch(0.882 0.059 254.128));
+  --ui-color-info-300: var(--color-blue-300, oklch(0.809 0.105 251.813));
+  --ui-color-info-400: var(--color-blue-400, oklch(0.707 0.165 254.624));
+  --ui-color-info-500: var(--color-blue-500, oklch(0.623 0.214 259.815));
+  --ui-color-info-600: var(--color-blue-600, oklch(0.546 0.245 262.881));
+  --ui-color-info-700: var(--color-blue-700, oklch(0.488 0.243 264.376));
+  --ui-color-info-800: var(--color-blue-800, oklch(0.424 0.199 265.638));
+  --ui-color-info-900: var(--color-blue-900, oklch(0.379 0.146 265.522));
+  --ui-color-info-950: var(--color-blue-950, oklch(0.282 0.091 267.935));
+  --ui-color-warning-50: var(--color-yellow-50, oklch(0.987 0.026 102.212));
+  --ui-color-warning-100: var(--color-yellow-100, oklch(0.973 0.071 103.193));
+  --ui-color-warning-200: var(--color-yellow-200, oklch(0.945 0.129 101.54));
+  --ui-color-warning-300: var(--color-yellow-300, oklch(0.905 0.182 98.111));
+  --ui-color-warning-400: var(--color-yellow-400, oklch(0.852 0.199 91.936));
+  --ui-color-warning-500: var(--color-yellow-500, oklch(0.795 0.184 86.047));
+  --ui-color-warning-600: var(--color-yellow-600, oklch(0.681 0.162 75.834));
+  --ui-color-warning-700: var(--color-yellow-700, oklch(0.554 0.135 66.442));
+  --ui-color-warning-800: var(--color-yellow-800, oklch(0.476 0.114 61.907));
+  --ui-color-warning-900: var(--color-yellow-900, oklch(0.421 0.095 57.708));
+  --ui-color-warning-950: var(--color-yellow-950, oklch(0.286 0.066 53.813));
+  --ui-color-error-50: var(--color-red-50, oklch(0.971 0.013 17.38));
+  --ui-color-error-100: var(--color-red-100, oklch(0.936 0.032 17.717));
+  --ui-color-error-200: var(--color-red-200, oklch(0.885 0.062 18.334));
+  --ui-color-error-300: var(--color-red-300, oklch(0.808 0.114 19.571));
+  --ui-color-error-400: var(--color-red-400, oklch(0.704 0.191 22.216));
+  --ui-color-error-500: var(--color-red-500, oklch(0.637 0.237 25.331));
+  --ui-color-error-600: var(--color-red-600, oklch(0.577 0.245 27.325));
+  --ui-color-error-700: var(--color-red-700, oklch(0.505 0.213 27.518));
+  --ui-color-error-800: var(--color-red-800, oklch(0.444 0.177 26.899));
+  --ui-color-error-900: var(--color-red-900, oklch(0.396 0.141 25.723));
+  --ui-color-error-950: var(--color-red-950, oklch(0.258 0.092 26.042));
+  --ui-color-neutral-50: var(--color-slate-50, oklch(0.984 0.003 247.858));
+  --ui-color-neutral-100: var(--color-slate-100, oklch(0.968 0.007 247.896));
+  --ui-color-neutral-200: var(--color-slate-200, oklch(0.929 0.013 255.508));
+  --ui-color-neutral-300: var(--color-slate-300, oklch(0.869 0.022 252.894));
+  --ui-color-neutral-400: var(--color-slate-400, oklch(0.704 0.04 256.788));
+  --ui-color-neutral-500: var(--color-slate-500, oklch(0.554 0.046 257.417));
+  --ui-color-neutral-600: var(--color-slate-600, oklch(0.446 0.043 257.281));
+  --ui-color-neutral-700: var(--color-slate-700, oklch(0.372 0.044 257.287));
+  --ui-color-neutral-800: var(--color-slate-800, oklch(0.279 0.041 260.031));
+  --ui-color-neutral-900: var(--color-slate-900, oklch(0.208 0.042 265.755));
+  --ui-color-neutral-950: var(--color-slate-950, oklch(0.129 0.042 264.695));
+  }
+  :root, .light {
+  --ui-primary: var(--ui-color-primary-500);
+  --ui-secondary: var(--ui-color-secondary-500);
+  --ui-success: var(--ui-color-success-500);
+  --ui-info: var(--ui-color-info-500);
+  --ui-warning: var(--ui-color-warning-500);
+  --ui-error: var(--ui-color-error-500);
+  }
+  .dark {
+  --ui-primary: var(--ui-color-primary-400);
+  --ui-secondary: var(--ui-color-secondary-400);
+  --ui-success: var(--ui-color-success-400);
+  --ui-info: var(--ui-color-info-400);
+  --ui-warning: var(--ui-color-warning-400);
+  --ui-error: var(--ui-color-error-400);
+  }
+}</style><link rel="stylesheet" href="/nuxt4bp/_nuxt/entry.DASzWfKt.css" crossorigin><style>@layer components {:where(.i-heroicons\:home){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m2.25 12l8.955-8.955a1.124 1.124 0 0 1 1.59 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25'/%3E%3C/svg%3E")}:where(.i-heroicons\:information-circle){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z'/%3E%3C/svg%3E")}}</style><link rel="preload" as="fetch" crossorigin="anonymous" href="/nuxt4bp/en/_payload.json?1554052a-0c34-4bf5-9cbd-cd2ab09436a3"><link rel="modulepreload" as="script" crossorigin href="/nuxt4bp/_nuxt/C-aqdZE4.js"><link rel="modulepreload" as="script" crossorigin href="/nuxt4bp/_nuxt/By0lZI5U.js"><link rel="modulepreload" as="script" crossorigin href="/nuxt4bp/_nuxt/Bf3Pm0m5.js"><link rel="preload" as="fetch" fetchpriority="low" crossorigin="anonymous" href="/nuxt4bp/_nuxt/builds/meta/1554052a-0c34-4bf5-9cbd-cd2ab09436a3.json"><link rel="prefetch" as="script" crossorigin href="/nuxt4bp/_nuxt/kCxs8GAn.js"><link rel="prefetch" as="script" crossorigin href="/nuxt4bp/_nuxt/6i6vCL6d.js"><link rel="prefetch" as="script" crossorigin href="/nuxt4bp/_nuxt/xyIkSvDk.js"><link rel="prefetch" as="script" crossorigin href="/nuxt4bp/_nuxt/AgXv7IAh.js"><script type="module" src="/nuxt4bp/_nuxt/C-aqdZE4.js" crossorigin></script><script>"use strict";(()=>{const t=window,e=document.documentElement,c=["dark","light"],n=getStorageValue("localStorage","nuxt-color-mode")||"system";let i=n==="system"?u():n;const r=e.getAttribute("data-color-mode-forced");r&&(i=r),l(i),t["__NUXT_COLOR_MODE__"]={preference:n,value:i,getColorScheme:u,addColorScheme:l,removeColorScheme:d};function l(o){const s=""+o+"",a="";e.classList?e.classList.add(s):e.className+=" "+s,a&&e.setAttribute("data-"+a,o)}function d(o){const s=""+o+"",a="";e.classList?e.classList.remove(s):e.className=e.className.replace(new RegExp(s,"g"),""),a&&e.removeAttribute("data-"+a)}function f(o){return t.matchMedia("(prefers-color-scheme"+o+")")}function u(){if(t.matchMedia&&f("").media!=="not all"){for(const o of c)if(f(":"+o).matches)return o}return"light"}})();function getStorageValue(t,e){switch(t){case"localStorage":return window.localStorage.getItem(e);case"sessionStorage":return window.sessionStorage.getItem(e);case"cookie":return getCookie(e);default:return null}}function getCookie(t){const c=("; "+window.document.cookie).split("; "+t+"=");if(c.length===2)return c.pop()?.split(";").shift()}</script></head><body><div id="__nuxt" class="isolate"><!--[--><!--[--><!--[--><!--[--><!--[--><div></div><div class="max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 my-3"><!--[--><nav class="flex justify-between items-center px-4 py-2 rounded-xl bg-gray-200 dark:bg-gray-800"><div class="flex items-center gap-2 sm:gap-4" "><a aria-current="page" href="/nuxt4bp/en" class="router-link-active router-link-exact-active flex items-center gap-1 p-1.5 sm:py-0.5 sm:px-0 rounded-full"><span class="iconify i-heroicons:home size-4.5" aria-hidden="true" style=""></span><span class="hidden sm:block">Home</span></a><a href="/nuxt4bp/en/info" class="flex items-center gap-1 p-1.5 sm:py-0.5 sm:px-0 rounded-full"><span class="iconify i-heroicons:information-circle size-5" aria-hidden="true" style=""></span><span class="hidden sm:block">Info</span></a></div><div class="flex items-center gap-4 sm:gap-1"><!--[--><!--[--><!--nuxt-i18n-slp-[bg]--><a href="/nuxt4bp/bg" class="flex items-center gap-2"><span class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-[calc(var(--ui-radius)*1.5)] ring ring-inset ring-(--ui-border-accented) text-(--ui-text) bg-(--ui-bg)"><!--[--><!----><!--]--><!--[-->БГ<!--]--><!--[--><!----><!--]--></span></a><!--/nuxt-i18n-slp--><!--]--><!--]--><!--[--><div class="animate-pulse rounded-[calc(var(--ui-radius)*1.5)] bg-(--ui-bg-elevated) w-8 h-8"><!--[--><!--]--></div><!--]--></div></nav><div class="max-w-(--ui-container) mx-auto sm:px-6 lg:px-8 my-3 border-t p-4 border-gray-200 dark:border-gray-800 rounded-xl"><!--[-->Hello <div><h1 id="my-first-page"><!--[-->My First Page<!--]--></h1><p><!--[-->Here is some content.<!--]--></p></div><!--]--></div><!--]--></div><!--]--><!--]--><!--[--><!--]--><!----><!--]--><!--[--><!--]--><!--]--><!--]--></div><div id="teleports"></div><script type="application/json" data-nuxt-data="nuxt-app" data-ssr="true" id="__NUXT_DATA__" data-src="/nuxt4bp/en/_payload.json?1554052a-0c34-4bf5-9cbd-cd2ab09436a3">[{"state":1,"once":9,"_errors":10,"serverRendered":6,"path":12,"prerenderedAt":13},["Reactive",2],{"$snuxt-i18n-meta":3,"$scolor-mode":4,"$stoasts":8},{},{"preference":5,"value":5,"unknown":6,"forced":7},"system",true,false,[],["Set"],["ShallowReactive",11],{"$QD8d9NkvSp":-1},"/en",1743077608875]</script><script>window.__NUXT__={};window.__NUXT__.config={public:{i18n:{baseUrl:"",defaultLocale:"en",defaultDirection:"ltr",strategy:"prefix",lazy:false,rootRedirect:"",routesNameSeparator:"___",defaultLocaleRouteNameSuffix:"default",skipSettingLocaleOnNavigate:false,differentDomains:false,trailingSlash:false,locales:[{code:"en",name:"EN",language:"en-US",files:["/home/user/nuxt_v4-ui_v3-i18n-starter_template/i18n/locales/en-US.json"]},{code:"bg",name:"БГ",language:"bg-BG",files:["/home/user/nuxt_v4-ui_v3-i18n-starter_template/i18n/locales/bg-BG.json"]}],detectBrowserLanguage:{alwaysRedirect:true,cookieCrossOrigin:false,cookieDomain:"",cookieKey:"i18n_redirected",cookieSecure:false,fallbackLocale:"",redirectOn:"all",useCookie:true},experimental:{localeDetector:"",switchLocalePathLinkSSR:false,autoImportTranslationFunctions:false,typedPages:true,typedOptionsAndMessages:false,generatedLocaleFilePathFormat:"absolute",alternateLinkCanonicalQueries:false,hmr:true},multiDomainLocales:false},content:{wsUrl:""},mdc:{components:{prose:true,map:{}},headings:{anchorLinks:{h1:false,h2:true,h3:true,h4:true,h5:false,h6:false}}}},app:{baseURL:"/nuxt4bp/",buildId:"1554052a-0c34-4bf5-9cbd-cd2ab09436a3",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body></html>
