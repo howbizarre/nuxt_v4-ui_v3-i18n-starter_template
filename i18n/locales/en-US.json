@@ -1,5 +1,8 @@
 {
   "LBL_HELLO": "Hello",
   "LBL_HOME": "Home",
-  "LBL_INFO": "Info"
+  "LBL_INFO": "Info",
+  "LBL_GO_HOME": "Go back to home",
+  "INF_PAGE_NOT_FOUND": "Page Not Found",
+  "TXT_NO_CONTENT": "Oops! The content you're looking for doesn't exist."
 }
