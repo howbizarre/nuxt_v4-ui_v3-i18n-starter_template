@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 const { t } = useI18n();
+const { data: author } = await useAsyncData("larbish", () => queryCollection('authors').where("stem", "=", "larbish").first());
 </script>
 
 <template>
   <UContainer class="my-3 border-t p-4 border-gray-200 dark:border-gray-800 rounded-xl">
-    {{ t('LBL_INFO') }}
+    {{ t('LBL_INFO') }} <pre>{{ author }}545</pre> |
   </UContainer>
 </template>
