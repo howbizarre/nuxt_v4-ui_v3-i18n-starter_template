@@ -37,13 +37,13 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   future: { compatibilityVersion: 4 },
 
-  app: {
-    baseURL: import.meta.dev ? '' : '/nuxt4bp/', // Ensure this matches the subfolder
-  },
+  // app: {
+  //   baseURL: import.meta.dev ? '' : '/nuxt4bp/', // Ensure this matches the subfolder
+  // },
 
-  nitro: {
-    output: {
-      publicDir: fileURLToPath(new URL('./nuxt4bp', import.meta.url))
-    }
-  },
+  // nitro: {
+  //   output: {
+  //     publicDir: fileURLToPath(new URL('./nuxt4bp', import.meta.url))
+  //   }
+  // },
 });

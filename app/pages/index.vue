@@ -4,6 +4,7 @@ const localePath = useLocalePath();
 const thisPath = computed(() => localePath("/"));
 
 const { data: page } = await useAsyncData(() => queryCollection("content").path(thisPath.value).first());
+const z = import.meta.dev;
 
 onMounted(async () => {
   page.value = await queryCollection("content").path(thisPath.value).first();
@@ -16,7 +17,7 @@ watch(thisPath, async () => {
 
 <template>
   <UContainer class="my-3 border-t p-4 border-gray-200 dark:border-gray-800 rounded-xl">
-    {{ t('LBL_HELLO') }} {{ thisPath }}
+    {{ t('LBL_HELLO') }} {{ thisPath }}  {{ z }}
 
     <template v-if="page">
       <ContentRenderer :value="page" />
