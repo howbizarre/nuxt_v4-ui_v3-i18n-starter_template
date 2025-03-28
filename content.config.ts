@@ -4,11 +4,11 @@ export default defineContentConfig({
   collections: {
     content: defineCollection({
       type: "page",
-      source: "**/*.md"
+      source: "pages/**/*.md"
     }),
     authors: defineCollection({
       type: 'data',
-      source: '**/*.json',
+      source: 'authors/*.json',
       schema: z.object({
         name: z.string(),
         avatar: z.string(),

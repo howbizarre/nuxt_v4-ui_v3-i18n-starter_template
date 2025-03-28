@@ -3,15 +3,15 @@ const { t } = useI18n();
 const localePath = useLocalePath();
 const thisPath = computed(() => localePath("/"));
 
-const { data: page } = await useAsyncData(() => queryCollection("content").path(thisPath.value).first());
+const { data: page } = await useAsyncData(() => queryCollection("content").path('/pages' + thisPath.value).first());
 const z = import.meta.dev;
 
 onMounted(async () => {
-  page.value = await queryCollection("content").path(thisPath.value).first();
+  page.value = await queryCollection("content").path('/pages' + thisPath.value).first();
 });
 
 watch(thisPath, async () => {
-  page.value = await queryCollection("content").path(thisPath.value).first();
+  page.value = await queryCollection("content").path('/pages' + thisPath.value).first();
 });
 </script>
 
