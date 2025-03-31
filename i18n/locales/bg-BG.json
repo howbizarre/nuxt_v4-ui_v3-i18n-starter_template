@@ -4,5 +4,6 @@
   "LBL_INFO": "Инфо",
   "LBL_GO_HOME": "Върнете се в началото",
   "INF_PAGE_NOT_FOUND": "Страницата не е намерена",
-  "TXT_NO_CONTENT": "Опа! Съдържанието, което търсите, не съществува."
+  "TXT_NO_CONTENT": "Опа! Съдържанието, което търсите, не съществува.",
+  "TXT_BASE_TITLE": "Nuxt v4 & Nuxt UI v3 & Nuxt i18n & Nuxt Content Starter Template"
 }

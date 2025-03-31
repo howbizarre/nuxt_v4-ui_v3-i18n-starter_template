@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 const { t } = useI18n();
 const { data: author } = await useAsyncData("larbish", () => queryCollection('authors').where("name", "=", "Baptiste Leproux").first());
+
+useHead(() => ({
+  title: t('LBL_INFO')
+}));
 </script>
 
 <template>

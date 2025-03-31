@@ -4,5 +4,6 @@
   "LBL_INFO": "Info",
   "LBL_GO_HOME": "Go back to home",
   "INF_PAGE_NOT_FOUND": "Page Not Found",
-  "TXT_NO_CONTENT": "Oops! The content you're looking for doesn't exist."
+  "TXT_NO_CONTENT": "Oops! The content you're looking for doesn't exist.",
+  "TXT_BASE_TITLE": "Nuxt v4 & Nuxt UI v3 & Nuxt i18n & Nuxt Content Starter Template"
 }
