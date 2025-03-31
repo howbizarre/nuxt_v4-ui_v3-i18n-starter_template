@@ -1,5 +1,12 @@
 {
-  "name": "Ahad Birang",
-  "avatar": "https://avatars.githubusercontent.com/u/2047945?v=4",
-  "url": "https://github.com/farnabaz"
+  "en": {
+    "name": "Ahad Birang",
+    "avatar": "https://avatars.githubusercontent.com/u/2047945?v=4",
+    "url": "https://github.com/farnabaz"
+  },
+  "bg": {
+    "name": "Ахад Биранг",
+    "avatar": "https://avatars.githubusercontent.com/u/2047945?v=4",
+    "url": "https://github.com/farnabaz"
+  }
 }

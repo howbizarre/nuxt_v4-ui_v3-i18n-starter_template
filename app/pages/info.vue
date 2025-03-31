@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-const { t } = useI18n();
-const { data: author } = await useAsyncData("larbish", () => queryCollection('authors').where("name", "=", "Baptiste Leproux").first());
+const { t, locale } = useI18n();
+const { data: authors } = await useAsyncData("larbishauthors", () => queryCollection('authors').all());
 
 useHead(() => ({
   title: t('LBL_INFO')
@@ -9,6 +9,13 @@ useHead(() => ({
 
 <template>
   <UContainer class="my-3 border-t p-4 border-gray-200 dark:border-gray-800 rounded-xl">
-    {{ t('LBL_INFO') }}: <strong>{{ author?.name }}</strong>
-  </UContainer>
+    <p>{{ t('LBL_INFO') }}: {{ locale }}</p>
+
+    <div v-for="author in authors" :key="author.id">
+      <template>
+        <pre>{{ author.meta[locale]! }}</pre>
+        <br />
+      </template>
+    </div>
+</UContainer>
 </template>

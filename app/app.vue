@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const i18nHead = useLocaleHead();
-const route = useRoute();
 const { t } = useI18n();
 const title = computed(() => t('TXT_BASE_TITLE'));
 
