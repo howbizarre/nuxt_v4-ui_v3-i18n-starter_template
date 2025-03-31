@@ -18,9 +18,5 @@ const isDark = computed({
              variant="link"
              aria-label="Color theme switcher"
              class="cursor-pointer" />
-
-    <template #fallback>
-      <USkeleton class="w-8 h-8" :ui="{skeleton: {base: 'animate-ping bg-black'}}" />
-    </template>
   </ClientOnly>
 </template>

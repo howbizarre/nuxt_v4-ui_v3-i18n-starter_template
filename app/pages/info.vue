@@ -12,10 +12,8 @@ useHead(() => ({
     <p>{{ t('LBL_INFO') }}: {{ locale }}</p>
 
     <div v-for="author in authors" :key="author.id">
-      <template>
-        <pre>{{ author.meta[locale]! }}</pre>
-        <br />
-      </template>
+      <pre>{{ author.meta[locale] }}</pre>
+      <br />
     </div>
 </UContainer>
 </template>
