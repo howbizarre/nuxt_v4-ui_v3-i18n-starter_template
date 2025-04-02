@@ -1,4 +1,4 @@
-# My First Page
+# Nuxt & UI & I18n & Content
 
 Here is some content.
 

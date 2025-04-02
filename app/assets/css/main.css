@@ -1,4 +1,5 @@
 @import "tailwindcss" theme(static);
+@plugin "@tailwindcss/typography";
 @import "@nuxt/ui";
 
 .router-link-active.router-link-exact-active {
