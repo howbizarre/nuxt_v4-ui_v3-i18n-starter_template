@@ -9,7 +9,7 @@ useHead(() => ({
 
 <template>
   <UContainer class="my-3 border-t p-4 border-gray-200 dark:border-gray-800 rounded-xl">
-    <p>{{ t('LBL_INFO') }}: {{ locale }}</p>
+    <h1>{{ t('LBL_INFO') }}</h1>
 
     <div v-for="author in authors" :key="author.id">
       <pre>{{ author.meta[locale] }}</pre>

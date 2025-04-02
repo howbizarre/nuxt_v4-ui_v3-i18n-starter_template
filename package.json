@@ -1,6 +1,6 @@
 {
   "name": "@howbizarre/nuxt_v4-ui_v3-i18n-starter-template",
-  "version": "1.0.1",
+  "version": "1.1.2",
   "description": "This boilerplate is based on Nuxt v4 with Nuxt UI v3 and Nuxt i18n module. Also TypeScript support, Heroicons and Dark theme switch.",
   "homepage": "https://bizarre.how/nuxt4bp/",
   "license": "CC-BY-4.0",
