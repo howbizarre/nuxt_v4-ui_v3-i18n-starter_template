@@ -32,6 +32,19 @@ export default defineNuxtConfig({
     },
   },
 
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: 'github-light',
+            dark: 'github-dark'
+          }
+        }
+      }
+    }
+  },
+
   css: ["~/assets/css/main.css"],
   compatibilityDate: "2024-11-01",
   devtools: { enabled: false },
