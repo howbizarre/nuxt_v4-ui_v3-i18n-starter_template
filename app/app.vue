@@ -23,7 +23,7 @@ useHead(() => ({
     <UContainer class="my-3">
       <NavBar />
 
-      <NuxtPage class="prose lg:prose-xl prose-zinc dark:prose-invert" />
+      <NuxtPage class="prose dark:prose-invert" />
     </UContainer>
   </UApp>
 </template>
