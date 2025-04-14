@@ -1,0 +1,33 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+
+    "[vue]": {
+      "editor.tabSize": 2,
+      "editor.insertSpaces": true
+    },
+
+    "[typescript]": {
+      "editor.autoClosingComments": "always"
+    },
+
+    "search.followSymlinks": true,
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/.vscode": true
+    },
+    "vue3snippets.enable-compile-vue-file-on-did-save-code": false
+  }
+}
