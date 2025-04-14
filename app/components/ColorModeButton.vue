@@ -1,22 +1,27 @@
-<script setup lang="ts">
+<script setup>
 const colorMode = useColorMode();
+
 const isDark = computed({
   get() {
-    return colorMode.value === "dark"
+    return colorMode.value === 'dark'
   },
   set() {
-    colorMode.preference = colorMode.value === "dark" ? "light" : "dark"
+    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
   }
 });
 </script>
 
 <template>
-  <ClientOnly>
-    <UButton :icon="isDark ? 'i-heroicons-sun-20-solid' : 'i-heroicons-moon-20-solid'"
-             @click="isDark = !isDark"
+  <ClientOnly v-if="!colorMode?.forced">
+    <UButton :icon="isDark ? 'i-heroicons-moon' : 'i-heroicons-sun'"
              color="neutral"
-             variant="link"
-             aria-label="Color theme switcher"
-             class="cursor-pointer" />
+             variant="outline"
+             class="cursor-pointer"
+             size="xs"
+             @click="isDark = !isDark" />
+
+    <template #fallback>
+      <div class="size-8" />
+    </template>
   </ClientOnly>
 </template>
