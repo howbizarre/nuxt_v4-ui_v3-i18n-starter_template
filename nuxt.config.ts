@@ -3,7 +3,7 @@ export default defineNuxtConfig({
 
   i18n: {
     vueI18n: "./i18n.config.ts",
-    strategy: "prefix",
+    strategy: "prefix_except_default",
     defaultLocale: "en",
     baseUrl: "/",
     detectBrowserLanguage: {
@@ -48,15 +48,5 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   compatibilityDate: "2024-11-01",
   devtools: { enabled: false },
-  future: { compatibilityVersion: 4 },
-
-  // app: {
-  //   baseURL: import.meta.dev ? '' : '/nuxt4bp/', // Ensure this matches the subfolder
-  // },
-
-  // nitro: {
-  //   output: {
-  //     publicDir: fileURLToPath(new URL('./nuxt4bp', import.meta.url))
-  //   }
-  // },
+  future: { compatibilityVersion: 4 }
 });
