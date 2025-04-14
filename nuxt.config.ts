@@ -1,3 +1,5 @@
+//import path from "path";
+
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxtjs/i18n", "@nuxt/content"],
 
@@ -48,5 +50,18 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   compatibilityDate: "2024-11-01",
   devtools: { enabled: false },
-  future: { compatibilityVersion: 4 }
+  future: { compatibilityVersion: 4 },
+
+  /** -> 
+   * Used for static hosting generation on Github Pages 
+   */
+  // app: {
+  //   baseURL: import.meta.dev ? "/nuxt4bp/" : "/",
+  // },
+  // nitro: {
+  //   output: {
+  //     publicDir: path.join(__dirname, "nuxt4bp"),
+  //   },
+  // },
+  /** <-  */
 });
