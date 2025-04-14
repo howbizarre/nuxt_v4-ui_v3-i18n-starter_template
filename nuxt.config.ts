@@ -1,5 +1,3 @@
-import { fileURLToPath } from 'url';
-
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxtjs/i18n", "@nuxt/content"],
 
