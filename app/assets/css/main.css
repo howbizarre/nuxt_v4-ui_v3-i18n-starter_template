@@ -1,6 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "@tailwindcss/typography";
-@import "@nuxt/ui";
+@import '@nuxt/ui';
 
 .router-link-active.router-link-exact-active {
   @apply text-black dark:text-white font-bold bg-white dark:bg-black sm:bg-white/0 sm:dark:bg-black/0;

@@ -15,5 +15,5 @@ useHead(() => ({
       <pre>{{ author.meta[locale] }}</pre>
       <br />
     </div>
-</UContainer>
+  </UContainer>
 </template>
