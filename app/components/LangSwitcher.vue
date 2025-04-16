@@ -12,8 +12,8 @@ watch(locale, () => useHead({ htmlAttrs: { lang: locale.value } }));
                         class="flex items-center gap-2">
     <UButton :label="locale.name"
              color="neutral"
-             variant="outline"
+             variant="ghost"
              class="cursor-pointer"
-             size="xs" />
+             size="md" />
   </SwitchLocalePathLink>
 </template>

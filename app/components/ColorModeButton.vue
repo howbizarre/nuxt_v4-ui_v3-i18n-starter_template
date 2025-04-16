@@ -15,9 +15,9 @@ const isDark = computed({
   <ClientOnly v-if="!colorMode?.forced">
     <UButton :icon="isDark ? 'i-heroicons-moon-16-solid' : 'i-heroicons-sun-20-solid'"
              color="neutral"
-             variant="outline"
+             variant="ghost"
              class="cursor-pointer"
-             size="xs"
+             size="md"
              @click="isDark = !isDark" />
 
     <template #fallback>

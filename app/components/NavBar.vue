@@ -17,7 +17,7 @@ const localePath = useLocalePath();
       </NuxtLinkLocale>
     </div>
 
-    <div class="flex items-center gap-2 sm:gap-1">
+    <div class="flex items-center gap-2 sm:gap-0">
       <LangSwitcher />
       <ColorModeButton />
     </div>
