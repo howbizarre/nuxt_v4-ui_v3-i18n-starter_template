@@ -5,7 +5,7 @@ const localePath = useLocalePath();
 
 <template>
   <nav class="flex justify-between items-center px-4 py-2 rounded-xl bg-gray-200/75 dark:bg-gray-800">
-    <div class="flex items-center gap-2 sm:gap-4"">
+    <div class="flex items-center gap-2 sm:gap-4">
       <NuxtLinkLocale :to="localePath('/')" class="flex items-center gap-1 p-1.5 sm:py-0.5 sm:px-0 rounded-full">
       <UIcon name="i-heroicons-home" class="size-4.5" />
       <span class="hidden sm:block">{{ t('LBL_HOME') }}</span>
