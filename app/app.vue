@@ -18,7 +18,7 @@ useHead({
     <NuxtRouteAnnouncer />
 
     <NuxtLayout>
-      <NuxtPage class="prose dark:prose-invert" />
+      <NuxtPage class="prose dark:!prose-invert" />
     </NuxtLayout>
   </UApp>
 </template>
