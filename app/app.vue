@@ -17,10 +17,8 @@ useHead({
   <UApp>
     <NuxtRouteAnnouncer />
 
-    <UContainer class="my-3">
-      <NavBar />
-
+    <NuxtLayout>
       <NuxtPage class="prose dark:prose-invert" />
-    </UContainer>
+    </NuxtLayout>
   </UApp>
 </template>
