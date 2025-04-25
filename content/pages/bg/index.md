@@ -7,10 +7,10 @@
 ## Създаване на проект с Nuxt 4
 
 ```bash
-npm create nuxt <project-name>
+npm create nuxt@latest
 ```
 
-Ползвам `npm`, но това да не Ви ограничава в избора. След като проекта е готов структурата ще е подобна на следната:
+Ползвам `npm`, но това да не Ви ограничава в избора. Следвайте инструкциите до избора, кои от официалните Nuxt модули да се инсталират - избрате `@nuxt/content` и `@nuxt/ui`. След края на инсталацията, структурата на проекта трябва изглежда по следния начин:
 
 ```bash
 ├─.nuxt
@@ -24,14 +24,13 @@ npm create nuxt <project-name>
 │ package─lock.json
 │ package.json
 │ README.md
-│ tree.txt
 │ tsconfig.json
 ```
 
-Към момента на писане на статията Nuxt 4 е в бета версия и е необходимо да направите ръчно няколко промени след инсталацията. В основната директория на проекта добавяте папка `аpp` и в нея преместете файла `app.vue` както и директорията `public` с всичко в нея. След това добавете ред в `nuxt.config.ts` файла:
+Към момента на писане на статията Nuxt 4 е в бета версия и е необходимо да направите ръчно няколко промени след инсталацията. В основната директория на проекта добавяте папка `<root>/аpp` и в нея преместете файла `app.vue`. След това добавете ред в `nuxt.config.ts` файла:
   
 ```ts
-// nuxt.config.ts
+// <root>/nuxt.config.ts
 export default defineNuxtConfig({
   //...
   future: { compatibilityVersion: 4 },
@@ -39,35 +38,80 @@ export default defineNuxtConfig({
 });
 ```
 
-Стартирате проекта с `npm run dev`, заредете в браузъра `http://localhost:3332` и ще видите добре познатия NuxtWelcome екран.
-
-## Добавяне на UI библиотеката на Nuxt
-
-Може да следвате [документацията от сайта на Nuxt](https://nuxt.com/modules/ui#nuxt) с едно мъничко изключение - папката `assets` трябва да я създадете, не в основната директория на проекта, а в папката `app`. И все пак стъпките са:
-
-```bash
-npm install @nuxt/ui
-```
-
-```ts
-// nuxt.config.ts
-export default defineNuxtConfig({
-  //...
-  modules: ['@nuxt/ui'],
-  //...
-});
-```
+След това в `<root>/аpp` добавете директория `assets` и в нея добавете `css` директория. В нея добавете `main.css` файл, в който ще импортирате Tailwind CSS и @nuxt/ui.
 
 ```css
-/* app/assets/css/main.css */
+/* <root>/app/assets/css/main.css */
 @import "tailwindcss";
 @import "@nuxt/ui";
 ```
 
-## Добавяне на i18n
-
-```bash
-npm install nuxt-i18n
-```
+След това в `nuxt.config.ts` файла добавете следния ред, за да импортирате CSS файла:
 
 ```ts
+// <root>/nuxt.config.ts
+export default defineNuxtConfig({
+  //...
+  css: ['~/assets/css/main.css'],
+  //...
+});
+```
+
+Следвващия файл, който трябва ще добавим е `app.config.ts`. Като начало не е нужен, но с напредване на проекта ще Ви бъде много удобно, че го има вече. Той се намира в `<root>/аpp` директорията. В него добавяме следния код:
+
+```ts
+// <root>/app/app.config.ts
+export default defineAppConfig({
+  ui: {
+    colors: {
+      primary: 'blue',
+      neutral: 'zinc'
+    }
+  }
+});
+```
+
+Стигнахме до настройките на `content` модула на Nuxt. В основната директория създаваме файл `content.config.ts` и добавяме следния код:
+
+```ts
+// <root>/content.config.ts
+import { defineContentConfig, defineCollection } from '@nuxt/content';
+
+export default defineContentConfig({
+  collections: {
+    content: defineCollection({
+      type: 'page',
+      source: '**/*.md'
+    })
+  }
+});
+```
+
+След това създаваме папка `content` в основната директория на проекта и в нея добавяме файл с име `index.md`.
+
+```md
+# My First Page
+
+Here is some content.
+```
+
+Отиваме в `<root>/app` директорията и добавяме `pages` директория. В нея добавяме `index.vue` файл с следното съдържание:
+
+```vue
+<!-- <root>/app/pages/index.vue -->
+<script setup lang="ts">
+const { data: home } = await useAsyncData(() => queryCollection('content').path('/').first())
+
+useSeoMeta({
+  title: home.value?.title,
+  description: home.value?.description
+})
+</script>
+
+<template>
+  <ContentRenderer v-if="home" :value="home" />
+  <div v-else>Home not found</div>
+</template>
+```
+
+Остана да добавиме и многоезичност към проекта.
