@@ -2,7 +2,7 @@
 
 ## TLDR;
 
-Ако не искате да създавате стъпка по стъпка шаблона, може директно да клонирате репозиторито [nuxt_v4-ui_v3-i18n-starter_template](https://github.com/howbizarre/nuxt_v4-ui_v3-i18n-starter_template) и да го стартирате. Изпълнявате `npm install` и `npm run dev` в директорията на проекта. Стартира се на порт **3332**, който може да промените в `package.json` файла.
+Ако не искате да създавате стъпка по стъпка шаблона, може директно да клонирате репозиторито [nuxt_v4-ui_v3-i18n-starter_template](https://github.com/howbizarre/nuxt_v4-ui_v3-i18n-starter_template "GitHub репозиторито за шаблона") и да го стартирате. Изпълнявате `npm install` и `npm run dev` в директорията на проекта. Стартира се на порт **3332**, който може да промените в `package.json` файла.
 
 ## Създаване на проект с Nuxt 4
 
@@ -90,6 +90,7 @@ export default defineContentConfig({
 След това създаваме папка `content` в основната директория на проекта и в нея добавяме файл с име `index.md`.
 
 ```md
+<!-- <root>/content/index.md -->
 # My First Page
 
 Here is some content.
@@ -114,4 +115,38 @@ useSeoMeta({
 </template>
 ```
 
-Остана да добавим и многоезичност към проекта.
+Остана да добавим и поддръжка на повече от един език към проекта. Става сравнително лесно с [Nuxt I18n](https://i18n.nuxtjs.org/ "Nuxt I18n модул") модула. и Nuxt CLI.
+
+```bash
+npx nuxi@latest module add @nuxtjs/i18n
+```
+
+Горната команда ще добави модула и в `nuxt.config.ts` файла, но все пак проверете дали го виждате. Ако случайно не е добавен, обновете файла:
+
+```ts
+// <root>/nuxt.config.ts
+export default defineNuxtConfig({
+  //...
+  modules: ['@nuxtjs/i18n'],
+  //...
+});
+```
+
+След това добавете `i18n` конфигурация в `nuxt.config.ts` файла:
+
+```ts
+// <root>/nuxt.config.ts
+export default defineNuxtConfig({
+  //...
+  i18n: {
+    locales: [
+      { code: 'en', name: 'English', iso: 'en-US', file: 'en-US.json' },
+      { code: 'bg', name: 'Български', iso: 'bg-BG', file: 'bg-BG.json' }
+    ],
+    defaultLocale: 'en',
+    vueI18n: './i18n.config.ts'
+  }
+});
+```
+
+Разбира се - използвайте Вашите локализации. Моя майчински език е Български, затова фигурира в конфигурацията.
