@@ -96,6 +96,11 @@ export default defineContentConfig({
 
 ```md
 <!-- <root>/content/index.md -->
+---
+title: My First Page
+description: This is my first page.
+---
+
 # My First Page
 
 Here is some content.
@@ -155,3 +160,22 @@ export default defineNuxtConfig({
 ```
 
 Разбира се - използвайте Вашите локализации. Моя майчински език е Български, затова фигурира в конфигурацията.
+
+Сега е времето да добавим и превода в `content` директорията. Създаваме папка с локализацията - за мен ще е `<root>/content/bg`, и в нея добавяме `index.md` файл:
+
+```md
+<!-- <root>/content/bg/index.md -->
+---
+title: "Моята първа страница"
+description: "Това е моята първа страница."
+---
+
+# Моята първа страница
+
+Ето малко текст, който ще бъде показан на страницата.
+```
+
+Редактираме `<root>/app/pages/index.vue` файла, за да добавим поддръжка на локализацията:
+
+```vue
+<!-- <root>/app/pages/index.vue -->
