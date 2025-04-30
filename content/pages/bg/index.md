@@ -1,3 +1,8 @@
+---
+title: "Nuxt 4, UI 3, I18n и Content"
+description: "Как да създадете проект с Nuxt 4, UI 3, I18n и Content"
+---
+
 # Nuxt & UI & I18n & Content
 
 ## TLDR;

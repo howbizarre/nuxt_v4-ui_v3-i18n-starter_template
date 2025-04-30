@@ -1,3 +1,8 @@
+---
+title: Nuxt 4 + UI 3 + i18n 1.0.0
+description: How to create a project with Nuxt 4, UI 3, i18n and Content
+---
+
 # Nuxt & UI & I18n & Content
 
 ## TLDR;
